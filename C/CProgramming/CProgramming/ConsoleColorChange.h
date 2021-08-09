@@ -1,7 +1,7 @@
 #pragma once
 
 #include <iostream>
-#include <Windows.h>>
+#include <Windows.h>
 #include <WinCon.h>
 #include <string>
 #include <format>
@@ -24,4 +24,4 @@
 void FontColorChange(unsigned short textColor=WHITE, unsigned short backColor=BLACK);
 
 // Console창의 크기를 변경하는 함수
-void ConsoleWindowSize(unsigned short cols = 120, unsigned short lines = 40);
+void ConsoleWindowSize(unsigned short cols = 140, unsigned short lines = 40);

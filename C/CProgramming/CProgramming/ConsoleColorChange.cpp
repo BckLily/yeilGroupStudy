@@ -2,6 +2,7 @@
 
 
 
+// Console Font Change
 void FontColorChange(unsigned short textColor, unsigned short backColor) {
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), textColor | (backColor << 4));
 }
