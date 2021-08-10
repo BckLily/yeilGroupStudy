@@ -123,7 +123,23 @@
 //}
 
 int main(void) {
+	FontColorChange(GREEN);
+	std::cout << "두 수 입력했을 때 최대 공약수 구하는 프로그램" << std::endl;
+	FontColorChange(WHITE);
 
+	int num1 = 0, num2 = 0;
 
+	std::cin >> num1 >> num2;
+
+	int max = 0;
+
+	for (int i = 1; i <= ((num1 < num2) ? num1 : num2); i++) {
+		std::cout << i << std::endl;
+		if (!(num1 % i) && !(num2 % i)) {
+			max = i;
+		}
+	}
+
+	std::cout << "max: " << max;
 
 }
