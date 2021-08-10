@@ -1,6 +1,7 @@
 #include <iostream>
 #include "ConsoleColorChange.h"
-
+#include <Windows.h>
+#include <conio.h>
 
 //int main(void) {
 //
@@ -318,31 +319,96 @@
 //	return 0;
 //}
 
+//
+//int main(void) {
+//
+//	int i = 0, total = 0;
+//
+//	for (int i = 1; i <= 1000; i++) {
+//		if (i % 3 == 0) {
+//			if (i % 5 == 0) {
+//				total += i;
+//			}
+//		}
+//		else {
+//			total += i;
+//		}
+//	}
+//
+//	printf("%d\n", total);
+//
+//	return 0;
+//}
+
 
 int main(void) {
+	char menu = 0;
 
-	int i = 0, total = 0;
+	char name[20] = { NULL };
+	int korean = 0;
+	int math = 0;
+	int english = 0;
+	float aver = 0;
 
-	for (int i = 1; i <= 1000; i++) {
-		if (i % 3 == 0) {
-			if (i % 5 == 0) {
-				total += i;
-			}
-		}
-		else {
-			total += i;
+	
+	while (1) {
+		switch (menu) {
+		case 0:
+			system("cls");
+			printf("====================\n");
+			printf("    학생성적관리    \n");
+			printf("====================\n");
+			printf("    1. 학생 이름등록\n");
+			printf("    2. 3과목 점수등록\n");
+			printf("    3. 점수 확인\n");
+			printf("    4. 종료\n");
+			printf("====================\n");
+			printf("    입력: ");
+
+			scanf(" %d", &menu);
+
+			break;
+		case 1:
+			system("cls");
+			printf("이름입력 : ");
+			scanf(" %s", name);
+
+			menu = 0;
+			break;
+		case 2:
+			system("cls");
+			printf("세 과목의 성적을 입력하시오\n");
+			printf("국어 : ");
+			scanf(" %d", &korean);
+			printf("수학 : ");
+			scanf(" %d", &math);
+			printf("영어 : ");
+			scanf(" %d", &english);
+
+			menu = 0;
+			break;
+		case 3:
+			system("cls");
+			printf("====================\n");
+			printf("%s님의 점수\n", name);
+			printf("국어 점수 : %d\n", korean);
+			printf("수학 점수 : %d\n", math);
+			printf("영어 점수 : %d\n", english);
+			printf("합계 점수 : %d\n", korean + math + english);
+			printf("평균 점수 : %.2f\n", (float)(korean + math + english) / 3);
+			printf("====================\n");
+
+			system("pause");
+			menu = 0;
+			break;
+		case 4:
+			// 프로그램 종료
+			exit(0);
+			break;
 		}
 	}
 
-	printf("%d\n", total);
 
 	return 0;
 }
 
-
-//int main(void) {
-//
-//
-//
-//	return 0;
-//}
