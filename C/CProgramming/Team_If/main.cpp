@@ -122,24 +122,108 @@
 //	return 0;
 //}
 
+
+//
+//int main(void) {
+//	FontColorChange(GREEN);
+//	std::cout << "두 수 입력했을 때 최대 공약수 구하는 프로그램" << std::endl;
+//	FontColorChange(WHITE);
+//
+//	int num1 = 0, num2 = 0;
+//
+//	std::cin >> num1 >> num2;
+//
+//	int max = 0;
+//
+//	for (int i = 1; i <= ((num1 < num2) ? num1 : num2); i++) {
+//		std::cout << i << std::endl;
+//		if (!(num1 % i) && !(num2 % i)) {
+//			max = i;
+//		}
+//	}
+//
+//	std::cout << "max: " << max;
+//
+//}
+
+//
+//int main(void) {
+//	FontColorChange(GREEN);
+//	std::cout << "프로그램 사용자로부터 숫자 N입력 받아서 2^k <= N을 만족하는 k의 최댓값을 구하는 프로그램" << std::endl;
+//	FontColorChange(WHITE);
+//
+//	int N;
+//
+//	std::cin >> N;
+//
+//	int count = 0;
+//	if (N >= 1) {
+//		for (int num = 2; num <= N; count++, num <<= 1) {
+//			std::cout << num << std::endl;
+//		}
+//	}
+//	else if (N > 0) {
+//		for (int num = 0; num > N; ++count, num >>= 1) {
+//			std::cout << num << std::endl;
+//		}
+//	}
+//	std::cout << "Count: " << count << std::endl;
+//
+//	return 0;
+//}
+
+
+//int main(void) {
+//	FontColorChange(GREEN);
+//	std::cout << "프로그램 사용자로부터 숫자 N입력 받아서 2^k <= N을 만족하는 k의 최댓값을 구하는 프로그램" << std::endl;
+//	FontColorChange(WHITE);
+//
+//	float N;
+//
+//	std::cin >> N;
+//
+//	int count = 0;
+//	if (N >= 1) {
+//		for (float num = 2; num <= N; count++, num *=2) {
+//			std::cout << num << std::endl;
+//		}
+//	}
+//	else if (N > 0) {
+//		for (float num = 1; num > N; --count, num /= 2) {
+//			std::cout << num << std::endl;
+//		}
+//	}
+//
+//	std::cout << "Count: " << count << std::endl;
+//
+//	return 0;
+//}
+
+
+
 int main(void) {
 	FontColorChange(GREEN);
-	std::cout << "두 수 입력했을 때 최대 공약수 구하는 프로그램" << std::endl;
+	std::cout << "프로그램 사용자로부터 숫자 N입력 받아서 2^k <= N을 만족하는 k의 최댓값을 구하는 프로그램" << std::endl;
 	FontColorChange(WHITE);
 
-	int num1 = 0, num2 = 0;
+	int N;
 
-	std::cin >> num1 >> num2;
+	scanf(" %d", &N);
 
-	int max = 0;
-
-	for (int i = 1; i <= ((num1 < num2) ? num1 : num2); i++) {
-		std::cout << i << std::endl;
-		if (!(num1 % i) && !(num2 % i)) {
-			max = i;
+	int count = 0;
+	if (N >= 1) {
+		for (int num = 2; num <= N; count++, num <<= 1) {
+			std::cout << num << std::endl;
 		}
 	}
+	else if (N > 0) {
+		for (int num = 0; num > N; ++count, num >>= 1) {
+			std::cout << num << std::endl;
+		}
+	}
+	//std::cout << "Count: " << count << std::endl;
+	printf("count: %d", count);
 
-	std::cout << "max: " << max;
-
+	return 0;
 }
+
