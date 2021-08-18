@@ -340,7 +340,7 @@
 //	return 0;
 //}
 
-
+/*
 int main(void) {
 	char menu = 0;
 
@@ -408,6 +408,17 @@ int main(void) {
 		}
 	}
 
+
+	return 0;
+}
+
+*/
+
+int main(void) {
+
+	int a = 0;
+
+	std::cout << a++ << a++ << --a << a++ << ++a << std::endl;
 
 	return 0;
 }
