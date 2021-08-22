@@ -7,12 +7,12 @@ void FontColorChange(unsigned short textColor, unsigned short backColor) {
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), textColor | (backColor << 4));
 }
 
-//"mode con cols=30 lines=30 | title Á¦¸ñ¸í"
+//"mode con cols=30 lines=30 | title ì œëª©ëª…"
 void ConsoleWindowSize(unsigned short cols, unsigned short lines)
 {
 	// string variable ... std::to_string() 
 	std::string s_format = "mode con cols=" + std::to_string(cols) + "lines=" + std::to_string(lines);
-	// stringÀ» char*·Î º¯°æ.
+	// stringì„ char*ë¡œ ë³€ê²½.
 	system(s_format.c_str());
 
 }
