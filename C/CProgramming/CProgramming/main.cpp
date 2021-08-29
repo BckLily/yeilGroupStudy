@@ -350,7 +350,7 @@ int main(void) {
 	int english = 0;
 	float aver = 0;
 
-	
+
 	while (1) {
 		switch (menu) {
 		case 0:
@@ -418,7 +418,11 @@ int main(void) {
 
 	int a = 0;
 
-	std::cout << a++ << a++ << --a << a++ << ++a << std::endl;
+	std::cout << a++ << a++ << --a << a++ << ++a << --a << std::endl;
+
+	a = 0;
+
+	printf("%d%d%d%d%d%d", a++, a++, --a, a++, ++a, --a);
 
 	return 0;
 }

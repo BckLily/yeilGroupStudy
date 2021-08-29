@@ -65,17 +65,6 @@ int main(void) {
 		Sort_Arr[i] = Arr[i];
 	}
 
-	//for (int i = 0; i < 10; i++) {
-
-	//	for (int j = 0; j < 10; j++) {
-	//		if (i != j && Sort_Arr[i] > Sort_Arr[j]) {
-	//			int temp = Sort_Arr[i];
-	//			Sort_Arr[i] = Sort_Arr[j];
-	//			Sort_Arr[j] = temp;
-	//			break;
-	//		}
-	//	}
-	//}
 	for (int i = 0; i < 10 - 1; i++) {
 		int maxIdx = i;
 		for (int j = i + 1; j < 10; j++) {
@@ -115,7 +104,7 @@ int main(void) {
 	scanf(" %[^\n]s", arr2);
 	for (int i = 0; arr2[i] != '\0'; i++) {
 		if (arr2[i] >= 'A' && arr2[i] <= 'Z') {
-			arr2[i] -= 'A' - 'a';
+			arr2[i] += 'a' - 'A';
 		}
 	}
 	printf("출력: %s", arr2);
